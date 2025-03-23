@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 221 83% 53%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -30,24 +33,17 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 221 83% 53%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -95,7 +91,133 @@
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  html, body {
+    @apply antialiased scroll-smooth;
+    font-family: 'Inter', sans-serif;
   }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+  }
+}
+
+/* Custom Glass Effect Styles */
+.glass-effect {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+.dark .glass-effect {
+  @apply bg-black/30 backdrop-blur-md border border-white/5;
+}
+
+/* Page Transitions */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-bank-blue text-white py-2 px-4 rounded-md transition-all 
+  shadow-button hover:shadow-button-hover hover:bg-bank-lightBlue 
+  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bank-blue;
+}
+
+.btn-secondary {
+  @apply bg-white text-bank-blue py-2 px-4 rounded-md transition-all 
+  border border-bank-blue shadow-button hover:shadow-button-hover 
+  hover:bg-bank-gray focus:outline-none focus:ring-2 focus:ring-offset-2 
+  focus:ring-bank-blue;
+}
+
+.btn-outline {
+  @apply bg-transparent text-bank-blue py-2 px-4 rounded-md transition-all 
+  border border-bank-blue hover:bg-bank-gray focus:outline-none focus:ring-2 
+  focus:ring-offset-2 focus:ring-bank-blue;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg p-6 shadow-card transition-shadow duration-300 hover:shadow-card-hover;
+}
+
+.glass-card {
+  @apply glass-effect rounded-lg p-6 shadow-glass transition-all duration-300;
+}
+
+/* Input styles */
+.input-field {
+  @apply w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none 
+  focus:ring-2 focus:ring-bank-blue focus:border-transparent transition-all duration-200;
+}
+
+/* Section styles */
+.section {
+  @apply py-12 md:py-16 px-4 md:px-8;
+}
+
+/* Animations */
+.animate-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in-delay-1 {
+  animation: fadeIn 0.5s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.animate-in-delay-2 {
+  animation: fadeIn 0.5s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-in-delay-3 {
+  animation: fadeIn 0.5s ease-out 0.3s forwards;
+  opacity: 0;
 }
