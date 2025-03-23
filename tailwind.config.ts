@@ -26,15 +26,15 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				bank: {
-					blue: '#0055B7',
-					lightBlue: '#0078D7',
-					accent: '#00A3FF',
-					gray: '#F0F4F8',
-					darkGray: '#667085',
+					blue: '#3b82f6', // Updated to a more modern blue
+					lightBlue: '#60a5fa',
+					accent: '#93c5fd',
+					gray: '#f5f7fa',
+					darkGray: '#64748b',
 					surface: '#FFFFFF',
-					text: '#1A1F2C',
-					success: '#00CA72',
-					error: '#FF4747'
+					text: '#1e293b',
+					success: '#10b981',
+					error: '#ef4444'
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
@@ -135,11 +135,11 @@ export default {
 				'pulse-slow': 'pulse-slow 3s ease-in-out infinite'
 			},
 			boxShadow: {
-				'card': '0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1)',
-				'card-hover': '0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.07)',
-				'button': '0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)',
-				'button-hover': '0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06)',
-				'glass': '0 4px 20px rgba(0,0,0,0.03), 0 0 0 1px rgba(0,0,0,0.02)',
+				'card': '0 10px 15px -3px rgba(0,0,0,0.03), 0 4px 6px -2px rgba(0,0,0,0.01)',
+				'card-hover': '0 20px 25px -5px rgba(0,0,0,0.05), 0 10px 10px -5px rgba(0,0,0,0.02)',
+				'button': '0 1px 2px rgba(0,0,0,0.05)',
+				'button-hover': '0 4px 6px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.08)',
+				'glass': '0 4px 20px rgba(0,0,0,0.03), 0 0 0 1px rgba(0,0,0,0.01)',
 			}
 		}
 	},

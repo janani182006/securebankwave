@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { Menu, X, Shield, Lock, ChevronDown } from "lucide-react";
+import { Menu, X, CreditCard, ChevronDown } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,7 +29,7 @@ const Navbar = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-10",
         isScrolled
-          ? "bg-white/80 backdrop-blur-lg shadow-sm py-3"
+          ? "bg-white/95 backdrop-blur-lg shadow-sm py-3"
           : "bg-transparent py-5"
       )}
     >
@@ -38,8 +38,8 @@ const Navbar = () => {
           to="/"
           className="flex items-center space-x-2 text-bank-blue transition-transform hover:scale-[1.02]"
         >
-          <Shield className="h-8 w-8" />
-          <span className="font-bold text-xl">SecureBankWave</span>
+          <CreditCard className="h-8 w-8" />
+          <span className="font-semibold text-xl">SecureBank</span>
         </Link>
 
         {/* Desktop Menu */}
@@ -53,8 +53,8 @@ const Navbar = () => {
                 <span>Services</span>
                 <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
               </button>
-              <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left scale-95 group-hover:scale-100">
-                <div className="py-1">
+              <div className="absolute left-0 mt-2 w-48 rounded-xl shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left scale-95 group-hover:scale-100">
+                <div className="py-2">
                   <Link to="/statements" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Account Statement</Link>
                   <Link to="/dashboard" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Account Summary</Link>
                   <Link to="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile Management</Link>
@@ -71,14 +71,13 @@ const Navbar = () => {
           <div className="flex items-center space-x-3">
             <Link
               to="/login"
-              className="inline-flex items-center px-5 py-2 border border-bank-blue text-bank-blue rounded-md text-sm font-medium transition-colors hover:bg-bank-gray"
+              className="inline-flex items-center px-5 py-2.5 border border-gray-200 text-bank-blue rounded-xl text-sm font-medium transition-colors hover:bg-bank-gray"
             >
-              <Lock className="mr-1 h-4 w-4" />
               Login
             </Link>
             <Link
               to="/register"
-              className="inline-flex items-center px-5 py-2 bg-bank-blue text-white rounded-md text-sm font-medium shadow-button hover:shadow-button-hover transition-all hover:bg-bank-lightBlue"
+              className="inline-flex items-center px-5 py-2.5 bg-bank-blue text-white rounded-xl text-sm font-medium shadow-button hover:shadow-button-hover transition-all hover:bg-bank-lightBlue"
             >
               Register
             </Link>
@@ -100,7 +99,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-16 inset-x-0 bg-white shadow-lg p-4 flex flex-col space-y-3 animate-fade-in">
+        <div className="md:hidden absolute top-16 inset-x-0 bg-white shadow-lg p-6 flex flex-col space-y-4 rounded-b-2xl animate-fade-in">
           <NavLink to="/" isMobile isActive={isActive("/")}>
             Home
           </NavLink>
@@ -122,13 +121,13 @@ const Navbar = () => {
           <div className="pt-3 grid grid-cols-2 gap-3">
             <Link
               to="/login"
-              className="py-2 text-center border border-bank-blue text-bank-blue rounded-md text-sm font-medium transition-colors hover:bg-bank-gray"
+              className="py-2.5 text-center border border-gray-200 text-bank-blue rounded-xl text-sm font-medium transition-colors hover:bg-bank-gray"
             >
               Login
             </Link>
             <Link
               to="/register"
-              className="py-2 text-center bg-bank-blue text-white rounded-md text-sm font-medium shadow-button hover:shadow-button-hover transition-all hover:bg-bank-lightBlue"
+              className="py-2.5 text-center bg-bank-blue text-white rounded-xl text-sm font-medium shadow-button hover:shadow-button-hover transition-all hover:bg-bank-lightBlue"
             >
               Register
             </Link>

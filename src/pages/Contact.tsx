@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { toast } from "@/components/ui/use-toast";
+import BlurCard from "@/components/ui/BlurCard";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -44,11 +45,11 @@ const Contact = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       
-      <main className="flex-grow pt-32 pb-16">
+      <main className="flex-grow pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           {/* Page Title */}
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-bank-text mb-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Contact <span className="text-bank-blue">Us</span>
             </h1>
             <p className="text-lg text-bank-darkGray">
@@ -59,32 +60,38 @@ const Contact = () => {
           {/* Contact Information & Form */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             {/* Contact Information */}
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <h2 className="text-2xl font-bold text-bank-text mb-6">Get in Touch</h2>
+            <BlurCard className="p-10" variant="gradient">
+              <h2 className="text-2xl font-bold mb-8">Get in Touch</h2>
               
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <div className="flex items-start">
-                  <Mail className="h-6 w-6 text-bank-blue mr-4 mt-1" />
+                  <div className="p-3 bg-blue-50 rounded-xl text-bank-blue mr-4 shadow-sm">
+                    <Mail className="h-6 w-6" />
+                  </div>
                   <div>
-                    <h3 className="font-semibold text-bank-text">Email Us</h3>
+                    <h3 className="font-semibold text-lg mb-2">Email Us</h3>
                     <p className="text-bank-darkGray">support@securebank.example</p>
                     <p className="text-bank-darkGray">info@securebank.example</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <Phone className="h-6 w-6 text-bank-blue mr-4 mt-1" />
+                  <div className="p-3 bg-green-50 rounded-xl text-green-600 mr-4 shadow-sm">
+                    <Phone className="h-6 w-6" />
+                  </div>
                   <div>
-                    <h3 className="font-semibold text-bank-text">Call Us</h3>
+                    <h3 className="font-semibold text-lg mb-2">Call Us</h3>
                     <p className="text-bank-darkGray">Customer Support: (800) 123-4567</p>
                     <p className="text-bank-darkGray">General Inquiries: (800) 765-4321</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <MapPin className="h-6 w-6 text-bank-blue mr-4 mt-1" />
+                  <div className="p-3 bg-purple-50 rounded-xl text-purple-600 mr-4 shadow-sm">
+                    <MapPin className="h-6 w-6" />
+                  </div>
                   <div>
-                    <h3 className="font-semibold text-bank-text">Visit Us</h3>
+                    <h3 className="font-semibold text-lg mb-2">Visit Us</h3>
                     <p className="text-bank-darkGray">
                       123 Financial Avenue<br />
                       New York, NY 10001<br />
@@ -94,22 +101,22 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div className="mt-8">
-                <h3 className="font-semibold text-bank-text mb-2">Business Hours</h3>
+              <div className="mt-10 pt-8 border-t border-gray-100">
+                <h3 className="font-semibold text-lg mb-3">Business Hours</h3>
                 <p className="text-bank-darkGray">Monday - Friday: 9:00 AM to 5:00 PM</p>
                 <p className="text-bank-darkGray">Saturday: 9:00 AM to 1:00 PM</p>
                 <p className="text-bank-darkGray">Sunday: Closed</p>
               </div>
-            </div>
+            </BlurCard>
             
             {/* Contact Form */}
             <div>
-              <h2 className="text-2xl font-bold text-bank-text mb-6">Send Us a Message</h2>
+              <h2 className="text-2xl font-bold mb-8">Send Us a Message</h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-4">
+                <div className="space-y-5">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-bank-darkGray mb-1">
+                    <label htmlFor="name" className="block text-sm font-medium text-bank-darkGray mb-2">
                       Your Name
                     </label>
                     <Input
@@ -119,11 +126,12 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       placeholder="John Doe"
+                      className="rounded-xl py-3 px-4"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-bank-darkGray mb-1">
+                    <label htmlFor="email" className="block text-sm font-medium text-bank-darkGray mb-2">
                       Email Address
                     </label>
                     <Input
@@ -134,11 +142,12 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       placeholder="john.doe@example.com"
+                      className="rounded-xl py-3 px-4"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-bank-darkGray mb-1">
+                    <label htmlFor="subject" className="block text-sm font-medium text-bank-darkGray mb-2">
                       Subject
                     </label>
                     <Input
@@ -148,11 +157,12 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       placeholder="How can we help you?"
+                      className="rounded-xl py-3 px-4"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-bank-darkGray mb-1">
+                    <label htmlFor="message" className="block text-sm font-medium text-bank-darkGray mb-2">
                       Message
                     </label>
                     <Textarea
@@ -162,12 +172,12 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       placeholder="Please describe your question or issue in detail..."
-                      className="min-h-[150px]"
+                      className="min-h-[180px] rounded-xl py-3 px-4"
                     />
                   </div>
                 </div>
                 
-                <Button type="submit" className="w-full bg-bank-blue hover:bg-bank-lightBlue">
+                <Button type="submit" className="w-full bg-bank-blue hover:bg-bank-lightBlue text-white py-3 px-4 rounded-xl">
                   Send Message
                 </Button>
               </form>

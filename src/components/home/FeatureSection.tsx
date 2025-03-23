@@ -1,22 +1,22 @@
 
-import { ArrowRight, Smartphone, Receipt, CreditCard, LineChart } from "lucide-react";
+import { ArrowRight, CreditCard, Receipt, LineChart, Smartphone } from "lucide-react";
 import { Link } from "react-router-dom";
 import BlurCard from "../ui/BlurCard";
 
 const FeatureSection = () => {
   return (
-    <section className="py-20">
+    <section className="py-24">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-bank-text mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Comprehensive Banking Features
           </h2>
-          <p className="text-bank-darkGray">
+          <p className="text-bank-darkGray text-lg">
             Everything you need for efficient money management, from account summaries to detailed transaction history.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <FeatureCard
             icon={<Receipt className="h-8 w-8" />}
             title="Account Statements"
@@ -61,17 +61,17 @@ interface FeatureCardProps {
 
 const FeatureCard = ({ icon, title, description, href, iconBg }: FeatureCardProps) => {
   return (
-    <BlurCard className="p-8 h-full">
-      <div className="flex flex-col">
-        <div className={`p-4 rounded-lg ${iconBg} w-fit mb-6`}>{icon}</div>
-        <h3 className="text-xl font-semibold mb-3">{title}</h3>
+    <BlurCard className="p-8 h-full" variant="gradient">
+      <div className="flex flex-col h-full">
+        <div className={`p-4 rounded-xl ${iconBg} w-fit mb-6 shadow-sm`}>{icon}</div>
+        <h3 className="text-xl font-semibold mb-4">{title}</h3>
         <p className="text-bank-darkGray mb-6">{description}</p>
         <Link
           to={href}
-          className="mt-auto flex items-center text-bank-blue font-medium hover:text-bank-lightBlue transition-colors"
+          className="mt-auto flex items-center text-bank-blue font-medium hover:text-bank-lightBlue transition-colors group"
         >
           Learn More
-          <ArrowRight className="ml-2 h-4 w-4" />
+          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
         </Link>
       </div>
     </BlurCard>
