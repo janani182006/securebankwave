@@ -1,69 +1,154 @@
-# Welcome to your Lovable project
+Project Report: State Bank of India (SBI) Online Banking Website
 
-## Project info
+1. Introduction
 
-**URL**: https://lovable.dev/projects/d9188e75-46f9-41a1-9549-2a12e55eb111
+1.1 Project Overview
 
-## How can I edit this code?
+The proposed project aims to develop a web-based online banking system inspired by the State Bank of India's (SBI) online platform (onlinesbi.sbi). This system will provide users with secure access to banking services such as account management, transaction history, and personal profile updates.
 
-There are several ways of editing your application.
+1.2 Objectives
 
-**Use Lovable**
+Develop a secure and user-friendly online banking platform.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d9188e75-46f9-41a1-9549-2a12e55eb111) and start prompting.
+Implement essential banking functionalities including login/signup, account summary, transaction history, and profile management.
 
-Changes made via Lovable will be committed automatically to this repo.
+Ensure data security and encryption for user information.
 
-**Use your preferred IDE**
+Provide an intuitive and responsive user interface.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2. Project Scope
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2.1 Features and Modules
 
-Follow these steps:
+Landing Page
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Welcome message and brief introduction.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Navigation to login and signup pages.
 
-# Step 3: Install the necessary dependencies.
-npm i
+Security guidelines for safe banking.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Login/Signup Page
 
-**Edit a file directly in GitHub**
+User authentication using username and password.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Two-factor authentication (OTP verification).
 
-**Use GitHub Codespaces**
+Password recovery and reset functionality.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Account Summary Page
 
-## What technologies are used for this project?
+Display of account balance and recent transactions.
 
-This project is built with .
+Account details (account number, type, branch details).
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Quick actions for fund transfer and bill payments.
 
-## How can I deploy this project?
+Account Statement Page
 
-Simply open [Lovable](https://lovable.dev/projects/d9188e75-46f9-41a1-9549-2a12e55eb111) and click on Share -> Publish.
+View detailed transaction history.
 
-## I want to use a custom domain - is that possible?
+Filter transactions by date, type, and amount.
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Downloadable PDF and CSV statements.
+
+Profile Page
+
+Update personal information (name, address, contact details).
+
+Change password and manage security settings.
+
+View registered mobile number and email ID.
+
+3. Technology Stack
+
+3.1 Frontend Technologies
+
+HTML, CSS, JavaScript for UI development.
+
+React.js or Angular for dynamic user interface.
+
+Bootstrap or Tailwind CSS for responsive design.
+
+3.2 Backend Technologies
+
+Node.js with Express.js or Django (Python) for server-side logic.
+
+MySQL or MongoDB for database management.
+
+JWT (JSON Web Token) for authentication.
+
+3.3 Security Measures
+
+SSL encryption for secure data transmission.
+
+Multi-factor authentication for user verification.
+
+Regular security audits and vulnerability assessments.
+
+4. Development Timeline
+
+4.1 Project Phases
+
+Phase
+
+Task
+
+Duration
+
+Phase 1
+
+Requirement Analysis & Planning
+
+2 Weeks
+
+Phase 2
+
+UI/UX Design
+
+3 Weeks
+
+Phase 3
+
+Frontend & Backend Development
+
+6 Weeks
+
+Phase 4
+
+Testing & Security Audits
+
+4 Weeks
+
+Phase 5
+
+Deployment & User Training
+
+3 Weeks
+
+Total Estimated Duration: 18 Weeks
+
+5. Expected Challenges & Solutions
+
+5.1 Security Concerns
+
+Challenge: Protecting user data from cyber threats.
+
+Solution: Implementing strong encryption and regular security updates.
+
+5.2 User Experience
+
+Challenge: Ensuring smooth navigation and ease of use.
+
+Solution: Conducting user testing and iterating on UI design.
+
+5.3 Scalability
+
+Challenge: Handling increased user traffic and transactions.
+
+Solution: Implementing cloud-based infrastructure for scalability.
+
+6. Conclusion
+
+The development of this online banking platform aims to provide users with a seamless and secure banking experience. By leveraging modern technologies and implementing robust security measures, the system will offer convenience, accessibility, and trustworthiness to users. This project aligns with digital banking trends, ensuring efficiency and customer satisfaction.
+
